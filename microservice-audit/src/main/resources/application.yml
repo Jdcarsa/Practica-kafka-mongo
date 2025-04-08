@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: microservice-audit
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: audit-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+  data:
+    mongodb:
+      uri: mongodb://mongo:mongo@localhost:10002/local?authSource=admin
+
+
+server:
+  port: 8083
